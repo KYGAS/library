@@ -1,0 +1,20 @@
+{
+    "files": {
+        "README.md": "c6a0560ba92924bfc0effa998e7e1c30ed1d4f603fbb4dd286d645370239ef8f",
+        "class/effect.js": "aac0644d400dad90f551563942d8bdc9c8b287438470dccedef6a8d0836f21b5",
+        "class/entity.js": "81bc1f2b52cce2cac68917d58ed4b874ec91293807187ce6239d9fec70620e8b",
+        "class/library.js": "d1b420d1889187fcdb8570e5358e22e09187161d7a9d03b3b45727e0b0825be1",
+        "class/packet.js": "93c95cced0d6146f2677b37c8dc4ac63315a4d229cfa0012bb776dac273d676b",
+        "class/player.js": "e5237696881a2c9a829700e97cef47781a26a83a38ce250197d1fd2d601bc844",
+        "index.js": "271ce33a8250038af37fecf31f9c60d88730b45d2332db0872e4b5f34afb350d",
+        "module.json": "18cc13d61383effb4dbfe71b0f1000429612d4726d60d42d1aeb7472d0f0ea87"
+    },
+    "defs": {
+        "C_LOGIN_ARBITER": "raw",
+        "S_INVEN": [17,18],
+        "S_LEAVE_PARTY": "raw",
+        "S_LOAD_TOPO": "raw",
+        "S_LOGIN": "raw",
+        "S_SPAWN_ME": "raw"
+    }
+}

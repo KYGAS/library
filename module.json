@@ -1,0 +1,12 @@
+{
+    "name": "library",
+    "author": "kysea/kygas",
+    "description": "Sub library for mods/libraries.",
+    "version": "1.0",
+    "servers": ["https://raw.githubusercontent.com/KYGAS/library/master/"],
+    "options": {
+        "cliName": "Library",
+        "guiName": "Library"
+    },
+    "disableAutoUpdate": false
+}
