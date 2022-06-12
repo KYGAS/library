@@ -10,12 +10,8 @@ const PACKET_DATA = {
             "version": 3 
         },
         {
-            "patch": 105,
+            "patch": 95,
             "version": 4 
-        },
-        {
-            "patch": 107,
-            "version": 5
         }
     ],
 
@@ -25,7 +21,7 @@ const PACKET_DATA = {
             "version": 1
         },
         {
-            "patch": 105,
+            "patch": 95,
             "version": 2
         }
     ],
@@ -113,11 +109,11 @@ const PACKET_DATA = {
             "version": 1
         },
         {
-            "patch": 105,
+            "patch": 96,
             "version": 2
         },
         {
-            "patch": 106,
+            "patch": 105,
             "version": 3,
         }
     ],
@@ -245,10 +241,6 @@ const PACKET_DATA = {
         {
             "patch": 74,
             "version": 7
-        },
-        {
-            "patch": 114,
-            "version": 8
         }
     ],
 
@@ -272,10 +264,6 @@ const PACKET_DATA = {
             "patch": 74,
             "version": 4
         },
-        {
-            "patch": 114,
-            "version": 5
-        }
     ],
 
     "C_NOTIMELINE_SKILL": [
@@ -362,11 +350,7 @@ const PACKET_DATA = {
         {
             "patch": 67,
             "version": 3
-        },
-        {
-            "patch": 110,
-            "version": 4
-        },
+        }
     ],
 
     "S_START_COOLTIME_SKILL": [
@@ -378,10 +362,6 @@ const PACKET_DATA = {
             "patch": 74,
             "version": 3
         },
-        {
-            "patch": 114,
-            "version": 4
-        }
     ],
 
     "S_DECREASE_COOLTIME_SKILL": [
@@ -393,10 +373,6 @@ const PACKET_DATA = {
             "patch": 74,
             "version": 3
         },
-        {
-            "patch": 114,
-            "version": 4
-        }
     ],
 
     "S_DEFEND_SUCCESS": [
@@ -481,10 +457,6 @@ const PACKET_DATA = {
         {
             "patch": 86,
             "version": 14
-        },
-        {
-            "patch": 114,
-            "version": 15
         }
     ],
 
@@ -522,10 +494,6 @@ const PACKET_DATA = {
         {
             "patch": 86,
             "version": 14
-        },
-        {
-            "patch": 110,
-            "version": 15
         }
     ],
 
@@ -561,17 +529,6 @@ const PACKET_DATA = {
         },
     ],
 
-    "S_PARTY_MEMBER_STAT_UPDATE": [
-        {
-            "patch": 92,
-            "version": 3
-        },
-        {
-            "patch": 108,
-            "version": 4
-        }
-    ],
-
     "S_PLAYER_STAT_UPDATE": [
         {
             "patch": 67,
@@ -592,6 +549,14 @@ const PACKET_DATA = {
         {
             "patch": 86,
             "version": 13
+        },
+        {
+            "patch": 93,
+            "version": 14
+        },
+        {
+            "patch": 105,
+            "version": 15,
         }
     ],
 
@@ -659,6 +624,10 @@ const PACKET_DATA = {
         {
             "patch": 80,
             "version": 15
+        },
+        {
+            "patch": 99,
+            "version": 16
         }
     ],
 
@@ -668,7 +637,7 @@ const PACKET_DATA = {
             "version": 11
         },
         {
-            "patch": 105,
+            "patch": 101,
             "version": 12
         },
     ],
@@ -764,11 +733,7 @@ const PACKET_DATA = {
     "S_PARTY_MEMBER_LIST": [
         {
             "patch": 80,
-            "version": 7,
-        },
-        {
-            "patch": 106,
-            "version": 9,
+            "version": 7
         }
     ],
     
@@ -786,21 +751,9 @@ const PACKET_DATA = {
             "version": 3
         },
         {
-            "patch": 105,
+            "patch": 96,
             "version": 4
         },
-        {
-            "patch": 107,
-            "version": 5
-        },
-        {
-            "patch": 109,
-            "version": 6
-        },
-        {
-            "patch": 114,
-            "version": 7
-        }
     ],
 
     "C_CHECK_VERSION": [
@@ -814,11 +767,7 @@ const PACKET_DATA = {
         {
             "patch": 80,
             "version": 3
-        },
-        {
-            "patch": 108,
-            "version": 4
-        },
+        }
     ],
 
     "S_FEARMOVE_STAGE": [
@@ -837,28 +786,28 @@ const PACKET_DATA = {
 
     "C_REQUEST_ABNORMALITY_TOOLTIP_VALUE": [
         {
-            "patch": 105,
+            "patch": 94,
             "version": 1
         }
     ],
 
     "S_ABNORMALITY_TOOLTIP_VALUE": [
         {
-            "patch": 105,
+            "patch": 94,
             "version": 1
         }
     ],
 
     "TTB_S_LOAD_EP_PAGE": [
         {
-            "patch": 105,
+            "patch": 96,
             "version": 1
         }
     ],
 
     "S_SKILL_LIST": [
         {
-            "patch": 105,
+            "patch": 100,
             "version": 2
         }
     ],

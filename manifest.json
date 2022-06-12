@@ -1,13 +1,13 @@
 {
     "files": {
         "README.md": "c6a0560ba92924bfc0effa998e7e1c30ed1d4f603fbb4dd286d645370239ef8f",
-        "class/effect.js": "aac0644d400dad90f551563942d8bdc9c8b287438470dccedef6a8d0836f21b5",
-        "class/entity.js": "81bc1f2b52cce2cac68917d58ed4b874ec91293807187ce6239d9fec70620e8b",
-        "class/library.js": "d1b420d1889187fcdb8570e5358e22e09187161d7a9d03b3b45727e0b0825be1",
-        "class/packet.js": "93c95cced0d6146f2677b37c8dc4ac63315a4d229cfa0012bb776dac273d676b",
-        "class/player.js": "e5237696881a2c9a829700e97cef47781a26a83a38ce250197d1fd2d601bc844",
-        "index.js": "271ce33a8250038af37fecf31f9c60d88730b45d2332db0872e4b5f34afb350d",
-        "module.json": "18cc13d61383effb4dbfe71b0f1000429612d4726d60d42d1aeb7472d0f0ea87"
+        "class/effect.js": "77c902a60571a995d2af95ca0acb60bf9e866a308340f70140b5652028b94ffb",
+        "class/entity.js": "5abe14986b1fa26561f1c1665d048f4fdbc63e8c6a36230d1ffcb8261bad0e6d",
+        "class/library.js": "c30bdeae2b81c9321898357d8982b33c5f1f47722f49f3e58ab91060a387a459",
+        "class/packet.js": "ba82b703d677dfd546280f8538298027a6cb2dcfa9b85599baa351e3c835e834",
+        "class/player.js": "5c51609a44b09692d08836a9207ccdec227ad47fbfeba6855ed3db65da22b1e5",
+        "index.js": "334716fa69abcae1ff53323315fe8eb49fdf195e37a85b7c67c227714b6aaff5",
+        "module.json": "d0d261032eeaa30334ac0f506c138343de35cd941ed441c4cd16d5556e4044d8"
     },
     "defs": {
         "C_LOGIN_ARBITER": "raw",

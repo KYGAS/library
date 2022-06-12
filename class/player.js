@@ -17,8 +17,7 @@ class player{
         // zone information
         this.zone = -1;
         // List over players in party
-        this.playersInParty = new Map();
-        this.unsetPlayersInParty = [];
+        this.playersInParty = [];
         this.partyLeader = false;
         // Pegasus status
         this.onPegasus = false;
@@ -44,9 +43,6 @@ class player{
             this.job = (e.templateId - 10101) % 100;
             this.name = e.name;
             this.level = e.level;
-            if (dispatch.majorPatchVersion >= 114) {
-                this.classChangeLevel = e.classChangeLevel;
-            }
         }
         dispatch.hook(...mods.packet.get_all("S_LOGIN"), DEFAULT_HOOK_SETTINGS, this.sLogin);
 
@@ -129,62 +125,48 @@ class player{
 
         // Party
         this.sPartyMemberList = (e) => {
-            this.unsetPlayersInParty = [];
-            this.playersInParty.clear();
+            this.playersInParty = [];
 
-            if (dispatch.majorPatchVersion >= 106) {
-                this.partyLeader = e.leader.serverId === this.serverId && e.leader.playerId == this.playerId;
-            } else {
-                this.partyLeader = e.leaderServerId === this.serverId && e.leaderPlayerId == this.playerId;
-            }
-
+            this.partyLeader = e.leaderServerId === this.serverId && e.leaderPlayerId == this.playerId;
 			for(let member of e.members){
 				// If the member isn't me, we can add him/her/helicopter. Let's not assume genders here
 				if(!this.isMe(member.gameId)) {
-                    if(member.gameId) this.playersInParty.set(member.gameId, member);
+                    if(member.gameId) this.playersInParty.push(member.gameId);
                     else {
                         let found = false;
                         for(const [gameId, {serverId, playerId}] of Object.entries(mods.entity.players)) {
                             if(serverId === member.serverId && playerId === member.playerId) {
                                 found = true;
-                                this.playersInParty.set(BigInt(gameId), member);
+                                this.playersInParty.push(BigInt(gameId));
                                 break;
                             }
                         }
                         if(found) continue;
 
-                        this.unsetPlayersInParty.push(member);
+                        this.playersInParty.push(member);
                     }
                 }
 			}
         }
         dispatch.hook(...mods.packet.get_all("S_PARTY_MEMBER_LIST"), this.sPartyMemberList);
 
-        this.sPartyMemberStatUpdate = (e) => {
-            this.playersInParty.forEach((gameId, member)=> {
-                if(e.serverId !== member.serverId || e.playerId !== member.playerId) return;
-                this.playersInParty.set(gameId, { ...member, ...e });
-            });
-        }
-        dispatch.hook(...mods.packet.get_all("S_PARTY_MEMBER_STAT_UPDATE"), this.sPartyMemberStatUpdate);
-
         this.sSpawnUser = (e) => {
-            if(!this.unsetPlayersInParty.length) return;
+            if(!this.playersInParty.length) return;
 
-            for(const idx in this.unsetPlayersInParty) {
-                const { serverId, playerId } = this.unsetPlayersInParty[idx];
-                if(serverId !== e.serverId || playerId !== e.playerId) continue;
+            for(const idx in this.playersInParty) {
+                const data = this.playersInParty[idx];
+                if(typeof data !== "object") continue;
 
-                this.playersInParty.set(e.gameId, { ...this.unsetPlayersInParty[idx], ...e });
-                this.unsetPlayersInParty.splice(this.unsetPlayersInParty.indexOf(this.unsetPlayersInParty[idx]), 1);
-                break;
+                const { serverId, playerId } = data;
+                if(serverId === e.serverId && playerId === e.playerId) {
+                    this.playersInParty[idx] = e.gameId;
+                }
             }
         };
         dispatch.hook(...mods.packet.get_all("S_SPAWN_USER"), this.sSpawnUser);
 
         this.sLeaveParty = (e) => {
-            this.unsetPlayersInParty = [];
-            this.playersInParty.clear();
+            this.playersInParty = [];
         }
         dispatch.hook('S_LEAVE_PARTY', 'raw', this.sLeaveParty);
 
